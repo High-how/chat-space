@@ -4,31 +4,25 @@
 
 .wrapper{
   height: 100vh;
-  width: 100vw;
   display: flex;
 
   .side_bar{
-    height: 100%;
     width: 300px;
     background-color: #253141;
     &__user_name{
       height: 100px;
-      width: 100%;
     }
     &__group_list{
       height: calc(100vh - 100px);
-      width: 100%;
       background-color: #2f3e51;
     }
   }
   
   .chat_main{
-    height: 100%;
     width: calc(100vw - 300px);
     background-color: #ffffff;
     &__group_info{
       height: 100px;
-      width: 100%;
       border-bottom: 1px #eeeeee;
     }
     &__message_list{
