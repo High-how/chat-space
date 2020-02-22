@@ -1,1 +1,13 @@
-<サイドバー>
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__username
+        masa
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__edit-user
+          = link_to "#" do
+            = icon('far', 'edit')
+        %li.side-header__box__menu__new-group
+          = link_to "#" do
+            = icon('fas', 'cog')
+  .groups

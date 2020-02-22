@@ -1,21 +1,24 @@
 .wrapper
+  = render "side_bar"
+  = render "main_chat"
 
- .chat-side
-  .chat-side__side-header
-   .chat-side__side-header__box
-    .chat-side__side-header__box__user-name
-     masa
-    %ul.chat-side__side-header__box__menu
-     %li.chat-side__side-header__box__menu__new-group
-      = link_to "#" do
-       = icon('far', 'edit')
-     %li.chat-side__side-header__box__menu__edit-user
-      = link_to "#" do
-       = icon('fas', 'cog')
+/.wrapper
 
-  .chat-side__groups
+/ .chat-side
+/  .chat-side__side-header
+/   .chat-side__side-header__box
+/    .chat-side__side-header__box__user-name
+/     masa
+/    %ul.chat-side__side-header__box__menu
+/     %li.chat-side__side-header__box__menu__new-group
+/      = link_to "#" do
+/       = icon('far', 'edit')
+/     %li.chat-side__side-header__box__menu__edit-user
+/      = link_to "#" do
+/       = icon('fas', 'cog')
+/  .chat-side__groups
 
- .chat-main
-  .chat-main__main-header
-  .chat-main__message
-  .chat-main__form
+/ .chat-main
+/  .chat-main__main-header
+/  .chat-main__message
+/  .chat-main__form

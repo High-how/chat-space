@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.wrapper{
+/*.wrapper{
   display: flex;
   height: 100vh;
   
@@ -34,6 +34,15 @@
           line-height: 20px;
           background-color: red;
           display: flex;
+          list-style: none;
+          &__edit-user{
+            margin-right: 5px;
+          }
+          li{
+          i{
+            color: #ffffff;
+          }
+         }
         }
       }
     }
@@ -59,4 +68,4 @@
       height: 90px;
     }
   }
-}
+}*/

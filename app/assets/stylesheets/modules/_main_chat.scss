@@ -1,0 +1,18 @@
+.chat-main{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+
+  .main-header{
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .message{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+  }
+  .form{
+    background-color: #d2d2d2;
+    height: 90px;
+  }
+}
