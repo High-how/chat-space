@@ -28,11 +28,12 @@
           2020/2/23(sun)13:20:00
       %p.message__box__text
         おはよう
+
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input_box__text', placeholder: 'type a message'
       .input_box
-        %input{type: "text", class: "input_box__text",placeholder: "type a message"}
-        %label{class: "input_box__image"}
-          =icon('fas', 'image')
-          %input{type: "file", class: "input_box__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "Send"}
+        = f.label :image, class: 'input__box__image' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'input_box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
