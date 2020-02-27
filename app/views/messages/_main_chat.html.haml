@@ -12,23 +12,12 @@
       = link_to "#",class: "btn" do
         Edit
   .message
+    = render @messages
     .message__box
       .message__box__info
         %p.message__box__info__talker
-          masa
         %p.message__box__info__date
-          2020/2/23(sun)13:20:00
       %p.message__box__text
-        おはよう
-    .message__box
-      .message__box__info
-        %p.message__box__info__talker
-          masa
-        %p.message__box__info__date
-          2020/2/23(sun)13:20:00
-      %p.message__box__text
-        おはよう
-
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'input_box__text', placeholder: 'type a message'
