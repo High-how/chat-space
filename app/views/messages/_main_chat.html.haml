@@ -2,14 +2,16 @@
   .main-header
     .main-header__group
       %p.main-header__group__name
-        test
+        = @group.name
       %ul.main-header__group__member
         %li.main-header__group__member__members
           Member : 
         %li.main-header__group__member__list
-          masa
+        - @group.users.each do|user|
+          = user.name
+
     .main-header__edit
-      = link_to "#",class: "btn" do
+      = link_to edit_group_path(@group), class: "btn" do
         Edit
   .message
     = render @messages
