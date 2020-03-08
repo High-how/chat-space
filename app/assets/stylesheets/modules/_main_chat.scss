@@ -50,6 +50,7 @@ $dark-color:#434a54;
     height: calc(100vh - 190px);
     padding: 35px 40px;
     box-sizing: border-box;
+    overflow: scroll;
     &__box{
       padding-bottom: 46px;
       &__info{
