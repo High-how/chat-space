@@ -22,7 +22,11 @@ li {
   font-size: 13px;
 }
 
-
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
 
 .chat-group-form {
   width: 980px;
