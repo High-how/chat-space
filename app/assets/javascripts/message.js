@@ -55,7 +55,7 @@ $(function(){
     .done(function(messages) {
       if (messages.length !== 0) {
       var insertHTML = '';
-      $.each(messages, function(i, message) {
+      messages.forEach(function(message){ 
         insertHTML += buildHTML(message)
       });
       $('.message').append(insertHTML);
@@ -66,7 +66,7 @@ $(function(){
       alert('error');
     });
   };
-  
+
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
