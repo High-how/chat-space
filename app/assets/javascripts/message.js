@@ -1,6 +1,6 @@
 $(function(){
   var buildHTML = function(message) {
-    if (message.content && message.image) {
+    var image = ( message.image ) ? `<img src=${message.image} " class="lower-message__image">` : "";
       var html = `<div class="message__box" data-message-id="${message.id}">
         <div class="message__box__info">
           <div class="message__box__info__talker">
@@ -14,42 +14,9 @@ $(function(){
           <p class="message__box__content">
             ${message.content}
           </p>
-          <img src=${message.image} " class="lower-message__image">
+            ${image}
         </div>
       </div>`
-
-    } else if (message.content) {
-      var html = `<div class="message__box" data-message-id="${message.id}">
-        <div class="message__box__info">
-          <div class="message__box__info__talker">
-            ${message.user_name}
-          </div>
-          <div class="message__box__info__date">
-            ${message.created_at}
-          </div>
-        </div>
-        <div class="message__box__text">
-          <p class="message__box__content">
-            ${message.content}
-          </p>
-        </div>
-      </div>`
-
-    } else if (message.image) {
-      var html = `<div class="message__box" data-message-id="${message.id}">
-        <div class="message__box__info">
-          <div class="message__box__info__talker">
-            ${message.user_name}
-          </div>
-          <div class="message__box__info__date">
-            ${message.created_at}
-          </div>
-        </div>
-        <div class="message__box__text">
-          <img src=${message.image} " class="lower-message__image">
-        </div>
-      </div>`
-    };
     return html;
   }
 
@@ -99,6 +66,7 @@ $(function(){
       alert('error');
     });
   };
+  
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
