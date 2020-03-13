@@ -15,11 +15,7 @@
         Edit
   .message
     = render @messages
-    .message__box
-      .message__box__info
-        %p.message__box__info__talker
-        %p.message__box__info__date
-      %p.message__box__text
+   
   .form
     = form_for [@group, @message] do |f|
       .input_box
